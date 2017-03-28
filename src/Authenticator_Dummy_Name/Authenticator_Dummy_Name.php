@@ -50,15 +50,13 @@ if ( ! class_exists( 'APIAPI\Authenticator_Dummy_Name\Authenticator_Dummy_Name' 
 		}
 
 		/**
-		 * Returns the default arguments.
+		 * Sets the default authentication arguments.
 		 *
 		 * @since 1.0.0
-		 * @access public
-		 *
-		 * @return array Array of `$key => $value` pairs.
+		 * @access protected
 		 */
-		public function get_default_args() {
-
+		protected function set_default_args() {
+			$this->default_args = array();
 		}
 	}
 
