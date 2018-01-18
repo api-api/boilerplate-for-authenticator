@@ -2,7 +2,7 @@
 /**
  * Authenticator loader.
  *
- * @package APIAPIAuthenticatorDummyName
+ * @package APIAPI\Authenticator_Dummy_Name
  * @since 1.0.0
  */
 

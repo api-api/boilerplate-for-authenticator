@@ -2,13 +2,15 @@
 /**
  * Authenticator_Dummy_Name class
  *
- * @package APIAPIAuthenticatorDummyName
+ * @package APIAPI\Authenticator_Dummy_Name
  * @since 1.0.0
  */
 
 namespace APIAPI\Authenticator_Dummy_Name;
 
 use APIAPI\Core\Authenticators\Authenticator;
+use APIAPI\Core\Request\Route_Request;
+use APIAPI\Core\Exception\Request_Authentication_Exception;
 
 if ( ! class_exists( 'APIAPI\Authenticator_Dummy_Name\Authenticator_Dummy_Name' ) ) {
 
@@ -25,11 +27,12 @@ if ( ! class_exists( 'APIAPI\Authenticator_Dummy_Name\Authenticator_Dummy_Name' 
 		 * the required values on the request object.
 		 *
 		 * @since 1.0.0
-		 * @access public
 		 *
-		 * @param APIAPI\Core\Request\Route_Request $request The request to send.
+		 * @param Route_Request $request The request to send.
+		 *
+		 * @throws Request_Authentication_Exception Thrown when the request cannot be authenticated.
 		 */
-		public function authenticate_request( $request ) {
+		public function authenticate_request( Route_Request $request ) {
 
 		}
 
@@ -40,12 +43,11 @@ if ( ! class_exists( 'APIAPI\Authenticator_Dummy_Name\Authenticator_Dummy_Name' 
 		 * It only checks whether authentication data has been properly set on it.
 		 *
 		 * @since 1.0.0
-		 * @access public
 		 *
-		 * @param APIAPI\Core\Request\Route_Request $request The request to check.
+		 * @param Route_Request $request The request to check.
 		 * @return bool True if the request is authenticated, otherwise false.
 		 */
-		public function is_authenticated( $request ) {
+		public function is_authenticated( Route_Request $request ) {
 
 		}
 
@@ -53,7 +55,6 @@ if ( ! class_exists( 'APIAPI\Authenticator_Dummy_Name\Authenticator_Dummy_Name' 
 		 * Sets the default authentication arguments.
 		 *
 		 * @since 1.0.0
-		 * @access protected
 		 */
 		protected function set_default_args() {
 			$this->default_args = array();
